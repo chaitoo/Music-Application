@@ -1,0 +1,35 @@
+
+<div class="add-genre">
+  <button class="cancel-btn btn btn-default pull-left" type="button" name="button" ui-sref="music">Back</button>
+  <a ui-sref="newGenre" class="genres-btn btn-primary btn-lg ">Add New Genre</a>
+</div>
+<div class="all-title page-heading page-header">
+  <h3>All Genres</h3>
+</div>
+<div class="list-group" >
+  <div  ng-repeat="genre in genres.results">
+    <a class="list-group-item" ui-sref="viewGenre({id:genre.id})">{{genre.name}}</a>
+  </div>
+
+</div>
+
+
+<div class="pages">
+          <ul  class="pagination">
+               <li ng-class="{disabled:vm.pager.currentPage === 1}">
+                   <a ng-click="vm.setPage(1)">First</a>
+               </li>
+               <li ng-class="{disabled:vm.pager.currentPage === 1}">
+                   <a ng-click="vm.setPage(vm.pager.currentPage - 1)">Previous</a>
+               </li>
+               <li ng-repeat="page in vm.pager.pages" ng-class="{active:vm.pager.currentPage === page}">
+                   <a ng-click="vm.setPage(page)">{{page}}</a>
+               </li>
+               <li ng-class="{disabled:vm.pager.currentPage === vm.pager.totalPages}">
+                   <a ng-click="vm.setPage(vm.pager.currentPage + 1)">Next</a>
+               </li>
+               <li ng-class="{disabled:vm.pager.currentPage === vm.pager.totalPages}">
+                   <a ng-click="vm.setPage(vm.pager.totalPages)">Last</a>
+               </li>
+           </ul>
+</div>

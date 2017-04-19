@@ -1,0 +1,101 @@
+body {
+  background-color: #EFEFEF !important;
+  font-family: 'Quicksand', sans-serif !important;
+}
+a {
+  cursor: pointer;
+}
+.rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+ul.rating {
+    display: inline-block;
+}
+.rating li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size:20px;
+}
+.rating .filled {
+    color: white;
+}
+.clear{
+  margin-top:20px;
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+	border-right:0;
+	box-shadow:0 0 0;
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+
+}
+.search {
+  padding: 20px 100px;
+  align-items: center;
+}
+.search-bar {
+  margin: 0px 0px !important;
+  width: 100% !important;
+}
+.page-heading{
+  text-align: center;
+  margin:  0px 0px !important;
+  margin-top: 10px!important;
+}
+.top-button {
+  padding: 20px 30px;
+  text-align: center;
+}
+.pages {
+  text-align: center;
+}
+.add-genre {
+  padding: 20px 50px;
+  text-align: center;
+  padding-left: 0px
+}
+.back-div {
+  padding: 20px 0px
+}
+.new-track-btn {
+  border-radius: 0px !important;
+  background-color: #078898 !important;
+  border-width: thin !important;
+  border-color: #078898 !important;
+}
+.genres-btn {
+  border-radius: 0px !important;
+  background-color: #66898F !important;
+  border-width: thin !important;
+  border-color: #66898F !important;
+}
+.all-title {
+  margin: 0px 0px !important;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #078898;
+  font-size: 25px;
+}
+.list-group-item {
+  background-color: #EFAA78 !important;
+  color: white !important;
+  text-align: center !important;
+  font-size: 20px !important;
+}
+.cancel-btn {
+  border-radius: 0px !important;
+}

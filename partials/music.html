@@ -1,0 +1,52 @@
+<div class="top-button">
+<button ui-sref="newMusic" class="new-track-btn btn-primary btn-lg ">Add New Track</button>
+<button ui-sref="genre" class="genres-btn btn-primary btn-lg nodecoration">Genres</button>
+</div>
+<div class="page-heading page-header">
+  <h3 class="all-title">All Tracks</h3>
+</div>
+<div class="search">
+	<div class="row">
+        <div class="search-bar col-lg-12 col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container">
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="Search" ng-model="query">
+                    <span class="input-group-addon">
+                        <button type="submit"  ui-sref="searchView({q:query})">
+                            <span class="glyphicon glyphicon-search" ></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+
+<div class="list-group" >
+  <div  ng-repeat="music in musics.results">
+    <a class="list-group-item" ui-sref="viewMusic({id:music.id})">{{music.title}}
+			<span star-rating rating-value="music.rating/2" max="5">{{music.rating}}</span></a>
+
+  </div>
+
+</div>
+<div class="pages">
+<ul  class="pagination">
+               <li ng-class="{disabled:vm.pager.currentPage === 1}">
+                   <a ng-click="vm.setPage(1)">First</a>
+               </li>
+               <li ng-class="{disabled:vm.pager.currentPage === 1}">
+                   <a ng-click="vm.setPage(vm.pager.currentPage - 1)">Previous</a>
+               </li>
+               <li ng-repeat="page in vm.pager.pages" ng-class="{active:vm.pager.currentPage === page}">
+                   <a ng-click="vm.setPage(page)">{{page}}</a>
+               </li>
+               <li ng-class="{disabled:vm.pager.currentPage === vm.pager.totalPages}">
+                   <a ng-click="vm.setPage(vm.pager.currentPage + 1)">Next</a>
+               </li>
+               <li ng-class="{disabled:vm.pager.currentPage === vm.pager.totalPages}">
+                   <a ng-click="vm.setPage(vm.pager.totalPages)">Last</a>
+               </li>
+           </ul>
+</div>

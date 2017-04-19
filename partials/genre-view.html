@@ -1,0 +1,13 @@
+<div class="back-div">
+  <button class="cancel-btn btn btn-default" type="button" name="button" ui-sref="genre">Back</button>
+</div>
+<div class="all-title page-header">
+  <h3>Genre: <small>{{genre.name}}</small></h3>
+</div>
+<div class="list-group" >
+  <a class="list-group-item"><b>ID: </b>{{genre.id}}</a>
+    <a class="list-group-item"><b>Name: </b>{{genre.name}}</a>
+</div>
+<div>
+  <a class="genres-btn btn btn-primary" ui-sref="editGenre({id:genre.id})">Edit</a>
+</div>

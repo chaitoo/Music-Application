@@ -1,0 +1,21 @@
+<div class="all-title page-header">
+  <h3>Add New Genre</h3>
+</div>
+<form class="form-horizontal" role="form" ng-submit="addGenre()" name="newform" novalidate>
+  <div class="form-group">
+    <label for="title" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input name="input" type="text" ng-model="genre.name" class="form-control" id="title" placeholder="Genre Name Here" required/>
+      <div ng-messages="newform.input.$error">
+      <div ng-message="required">This field is required</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" class="genres-btn btn btn-primary" value="Save"/>
+      <button class="cancel-btn btn btn-default" type="button" name="button" ui-sref="genre">Cancel</button>
+    </div>
+  </div>
+</form>

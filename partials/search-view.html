@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<div class="back-div">
+  <button class="btn btn-default" type="button" name="button" ui-sref="music">Back</button>
+</div>
+<!--<table class="table musictable">
+  <tr>
+    <td><h3>Details for {{music.title}}</h3></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Movie Title</td>
+    <td>{{music.title}}</td>
+  </tr>
+  <tr>
+    <td>Rating</td>
+    <td>{{music.rating}}</td>
+  </tr>
+  <tr ng-repeat ="genre in music.genres">
+    <td >Genre</td>
+    <td>{{genre.name}}</td>
+  </tr>
+</table>
+<div>
+  <a class="btn btn-primary" ui-sref="editMusic({id:music.id})">Edit</a>
+</div> -->
+
+<div class="all-title page-header">
+  <h3>Serach details for <small>{{music.title}}</small></h3>
+</div>
+<div class="list-group" >
+  <a class="list-group-item"><b>Movie Title: </b>{{music.title}}</a>
+    <a class="list-group-item"><b>Rating: </b>{{music.rating}}</a>
+    <a class="list-group-item"><b>Genre: </b><span ng-repeat ="genre in music.genres">
+      {{genre.name}}
+    </span></a>
+</div>
+<div>
+  <a class="genres-btn btn btn-primary" ui-sref="editMusic({id:music.id})">Edit</a>
+</div>
